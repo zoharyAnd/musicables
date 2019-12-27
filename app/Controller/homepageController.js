@@ -14,6 +14,4 @@ angular.module('homepageModule').controller('homepageController', ['$scope', fun
   //console.log($scope);
   $scope.current_page = "HOME PAGE ";
 
-
-
 }]);

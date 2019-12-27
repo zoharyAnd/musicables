@@ -1,0 +1,15 @@
+@import "now-ui-kit";
+
+@import "elements/alert";
+@import "elements/buttons";
+@import "elements/cards";
+@import "elements/forms";
+@import "elements/pagination";
+@import "elements/progress";
+@import "elements/slider";
+@import "elements/switch";
+@import "elements/tabs";
+
+nav, footer {
+    background-color: black;
+}

@@ -1,0 +1,14 @@
+.btn-simple {
+    background-color: transparent!important;
+
+    &:hover {
+        color: white!important;
+    }
+}
+
+.btn {
+    .btn-link {
+        background-color: transparent!important;
+        text-transform: capitalize;
+    }
+}
