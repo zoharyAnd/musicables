@@ -9,9 +9,12 @@
     "angular": "^1.7.5",
     "angular-loader": "^1.7.5",
     "angular-route": "^1.7.5",
+    "cors": "^2.8.5",
     "html5-boilerplate": "0.0.1"
   },
   "devDependencies": {
+    "@angular/core": "^8.2.14",
+    "@angular/material": "^8.2.3",
     "angular-mocks": "^1.7.5",
     "bootstrap": "^4.4.1",
     "cpx": "^1.5.0",

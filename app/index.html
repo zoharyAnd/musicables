@@ -6,7 +6,7 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>My AngularJS App</title>
+  <title>Musicables</title>
   <meta name="description" content="">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="lib/html5-boilerplate/dist/css/normalize.css">
@@ -27,8 +27,9 @@
 
   <link rel="stylesheet" href="assets/css/theme.css">
 
-  
   <script src="lib/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <!-- audio player soundJS library -->
+  <script src="https://code.createjs.com/1.0.0/createjs.min.js"></script>
 </head>
 <body>
   
@@ -52,11 +53,21 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   
+  <!-- JQuery -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
   <!-- Controllers -->
   <script src="app.js"></script>
-  <script src="assets/theme.js"></script>
+  <script src="theme.js"></script>
   <script src="/Controller/homepageController.js"></script>
   <script src="/Controller/aboutController.js"></script>
+  <script src="/Controller/albumController.js"></script>
+  <script src="/Controller/genreController.js"></script>
+  <script src="/Controller/artistController.js"></script>
   
 
 
@@ -64,16 +75,10 @@
   <script src="core/version/version-directive.js"></script>
   <script src="core/version/interpolate-filter.js"></script>
 
-  <!-- JQuery -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-  <!-- Bootstrap tooltips -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.4/umd/popper.min.js"></script>
-  <!-- Bootstrap core JavaScript -->
-  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  
   <!-- MDB core JavaScript -->
   <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.8.8/js/mdb.min.js"></script> -->
 
-  
 </body>
 
 </html>

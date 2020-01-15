@@ -1,16 +1,7 @@
-<div ng-controller="homepageController" id="cards-wrapper">
+<div ng-controller="genreController">
     <div class="title-banner container">
-        <h2 class="page-title">Top Tracks</h2>
-        <div class="input-group search-bar" [ngClass]="{'input-group-focus':focus1===true}">
-            <input type="text" class="form-control" placeholder="Search track ..." (focus)="focus1=true" (blur)="focus1=false">
-            <div class="input-group-append">
-              <span class="input-group-text">
-                  <i class="now-ui-icons users_single-02"></i>
-              </span>
-            </div>
-        </div>
+        <h2 class="page-title">{{title}}</h2>
     </div>
-    
     <div class="songs-wrapper">
         <a ng-repeat="song in songs" class="card" id={{song.id}}>
             <div class="card-image">

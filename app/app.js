@@ -1,6 +1,7 @@
 // This is the main application module 
 'use strict';
 
+
 // Declare app level module which depends on views, and core components
 angular.module('myApp', ['ngRoute','myApp.version', 'mainModule'])
 
@@ -11,10 +12,11 @@ angular.module('myApp', ['ngRoute','myApp.version', 'mainModule'])
 }]);
 
 // creation of a module named mainModule with dependencies for each page-controller
-angular.module("mainModule",['homepageModule', 'aboutModule']);
+angular.module("mainModule",['homepageModule', 'aboutModule', 'albumModule', 'genreModule', 'artistModule']);
 
 //attach the module with a new controller : mainController 
 angular.module("mainModule").controller("mainController",['$scope', function($scope){
-
+  $scope.genreGlobal="global genre";
 }]);
+
 

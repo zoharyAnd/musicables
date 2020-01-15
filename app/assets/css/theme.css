@@ -24,6 +24,7 @@
  * Copyright 2012-2013 Mattia Larentis
  * https://www.apache.org/licenses/LICENSE-2.0
  */
+@import "https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css";
 .bootstrap-switch {
   display: inline-block;
   direction: ltr;
@@ -5452,6 +5453,12 @@ ngb-carousel .carousel-control-next-icon {
     top: 50%;
     right: 0; }
 
+main {
+  padding: 50px 0; }
+
+body {
+  background-color: #565353; }
+
 .btn-simple {
   background-color: transparent !important; }
   .btn-simple:hover {
@@ -5464,11 +5471,90 @@ ngb-carousel .carousel-control-next-icon {
 .card {
   padding: 15px; }
 
+.dropdown-menu {
+  height: 200px;
+  overflow-y: scroll; }
+  .dropdown-menu a {
+    text-transform: capitalize; }
+
 .form-group input {
   height: 40px; }
 
+.search-bar {
+  max-width: 300px;
+  height: 40px;
+  margin-bottom: 0px;
+  margin-left: auto; }
+  .search-bar .input-group {
+    margin-bottom: 0;
+    height: 40px; }
+  .search-bar .input-group-text {
+    background-color: transparent;
+    color: white;
+    border-left: none; }
+    .search-bar .input-group-text i {
+      margin-left: 15px; }
+
+.modal-header {
+  padding: 0 !important;
+  height: 100px;
+  overflow: hidden;
+  position: relative; }
+  .modal-header .close {
+    z-index: 1;
+    color: white;
+    font-size: 50px;
+    font-weight: normal; }
+
+.modal-image {
+  height: 100%;
+  width: 100%; }
+  .modal-image img {
+    width: 100%; }
+
+.modal-title {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  color: white;
+  margin-bottom: 0;
+  background-color: rgba(50, 49, 49, 0.7);
+  height: 100%;
+  z-index: 0; }
+  .modal-title h5 {
+    margin-top: 15px;
+    text-transform: capitalize; }
+
+.modal-body {
+  height: min-content; }
+  .modal-body h5 {
+    margin-left: 15px;
+    font-weight: bold; }
+
 .nav-pagination {
   background-color: transparent; }
+
+.btn-player {
+  height: 40px;
+  width: 40px;
+  border-radius: 20px;
+  background-color: transparent;
+  border: none; }
+
+.play {
+  color: #00b304; }
+
+.stop {
+  color: #dd0808; }
+
+.player {
+  margin-top: 10px;
+  background-color: rgba(50, 49, 49, 0.7);
+  width: 100%; }
+  .card-image .player {
+    position: absolute;
+    bottom: 0; }
 
 .progress {
   margin: 15px 0; }
@@ -5579,6 +5665,114 @@ input:checked + .slider:before {
   .nav-tabs .active {
     border: 1px solid #888;
     border-radius: 30px; }
+
+.tags-icons {
+  font-weight: normal;
+  text-transform: capitalize;
+  line-height: 23px; }
+
+.fa-dot-circle:before {
+  font-size: 20px;
+  font-weight: bold;
+  border: 2px solid #b1acac;
+  color: #474040;
+  border-radius: 3px;
+  background-color: #a49f9f; }
+
+.album-card .card-image .nb-tracks {
+  position: absolute;
+  bottom: 0;
+  background-color: rgba(50, 49, 49, 0.7);
+  text-align: center;
+  color: white;
+  width: 100%;
+  height: 34px;
+  padding: 15px; }
+
+.track-wrapper {
+  display: flex;
+  background-color: #f4f4f4;
+  align-items: center;
+  height: 50px;
+  margin-bottom: 1px; }
+  .track-wrapper .btn-track-wrapper {
+    display: flex;
+    align-items: center;
+    margin-left: 15px; }
+    .track-wrapper .btn-track-wrapper button {
+      width: 40px;
+      height: 40px;
+      background-color: white;
+      margin: 0 3px;
+      border-radius: 50%; }
+  .track-wrapper p {
+    margin: 10px;
+    text-transform: capitalize; }
+
+#albumDetails .modal-body {
+  padding: 15px 0px !important; }
+
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.page-title {
+  color: white;
+  text-transform: capitalize; }
+
+.title-banner {
+  display: flex;
+  flex-wrap: wrap; }
+
+#artistDetails .modal-dialog {
+  max-width: 100%;
+  margin: 25px; }
+
+#artistDetails .track-wrapper {
+  width: 50%;
+  display: inline-flex;
+  height: 100px;
+  flex-wrap: wrap; }
+
+#artistDetails .modal-body {
+  padding-top: 0; }
+
+.album-image {
+  width: 100px;
+  height: 100px; }
+
+.modal-text {
+  padding: 40px 20px 0 20px; }
+  .modal-text h5 {
+    font-weight: bold;
+    font-size: 20px; }
+
+.artist-bio {
+  line-height: 30px;
+  font-size: 15px; }
+  .artist-bio i {
+    color: #6e6ee2;
+    font-style: normal; }
+
+.songs-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; }
+  .songs-wrapper .card {
+    width: 300px;
+    margin: 20px; }
+
+.card-image {
+  margin: -15px;
+  height: 200px;
+  overflow: hidden;
+  position: relative; }
+
+.card-data {
+  margin-top: 30px; }
+  .card-data p {
+    text-transform: capitalize; }
 
 nav, footer {
   background-color: black; }
