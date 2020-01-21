@@ -1,0 +1,17 @@
+<div ng-controller="artistdetailController">
+    <div class="title-banner container">
+        <h2 class="page-title">
+            {{title}}
+        </h2>
+    </div>
+    
+    <div ng-repeat="artist in searchedArtists" >
+        <img src={{artist.image}} alt={{artist.name}}/>
+        <p>{{artist.name}}</p>
+        <p>{{artist.nbAlbums}}</p>
+        <p>{{artist.bio}}</p>
+        <p>{{artist.bioAuthor}}</p>
+        <p>{{artist.blurb}}</p>
+
+    </div>
+</div>

@@ -1,6 +1,10 @@
 $( document ).ready(function() {
-   
+    
 
+});
+
+$('.album-toggler').on('click', function(){
+    showAlbumDetails(this.attr('id'));
 });
 
 function playSound (song) {
@@ -16,6 +20,7 @@ function pauseSound (song) {
 //show modal album details 
 function showAlbumDetails(albumId){
     $('#albumDetails .modal-body').empty();
+    
     //retrieve all tracks of the album form the API
     $.ajax({
         url: 'https://api.napster.com/v2.2/albums/'+albumId+'/tracks?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4',
@@ -39,12 +44,22 @@ function showAlbumDetails(albumId){
     
 }// end showAlbumDetails
 
-function showArtistDetails(artistId, artistImage, artistName, artistBio){
+function showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB){
     $('#artistDetails .modal-img').attr('src', artistImage);
     $('#artistDetails .modal-img').attr('alt', artistName);
 
     $('#artistDetails .artist-name').text(artistName);
-    $('#artistDetails .artist-bio').html(artistBio);
+    var blurb = artistBioB + "</br>";
+
+    if(artistBio == artistBioB){
+        artistBioB ="";
+        blurb = "";
+    }
+    else if (artistBioB == undefined) {
+        artistBioB = "";
+        blurb = "";
+    }
+    $('#artistDetails .artist-bio').html(blurb + artistBio +"</br><div class='author'> -- by "+artistBioAuthor+"</div>");
     
     $('#artistDetails .modal-body').empty();
     
@@ -55,9 +70,8 @@ function showArtistDetails(artistId, artistImage, artistName, artistBio){
         type: 'get',
         success: function(response){
             var data = response.albums;
-            console.log(data);
             for(var i=0; i < data.length; i++){
-                $('#artistDetails .modal-body').append('<a class="track-wrapper" id="'+data[i].id+'"><div class="album-image"><img src="https://api.napster.com/imageserver/v2/albums/'+data[i].id+'/images/500x500.jpg" alt="'+data[i].shortcut+'"/></div><div class="album-content"><p>'+data[i].name.toLowerCase()+'</p><p>'+data[i].artistName.toLowerCase()+'</p><p>'+formatDate(data[i].released)+'</p></div></a>');
+                $('#artistDetails .modal-body').append('<a type="button" class="track-wrapper album-toggler" id="'+data[i].id+'"><div class="album-image"><img src="https://api.napster.com/imageserver/v2/albums/'+data[i].id+'/images/500x500.jpg" alt="'+data[i].shortcut+'"/></div><div class="album-content"><p>'+data[i].name.toLowerCase()+'</p><p>'+data[i].artistName.toLowerCase()+'</p><p>'+formatDate(data[i].released)+'</p></div></a>');
             }
             
         }, //end success

@@ -11,7 +11,7 @@ angular.module('homepageModule', ['ngRoute'])
 }])
 
 angular.module('homepageModule').controller('homepageController', ['$scope', '$http', function($scope, $http) {
-  $scope.current_page = "HOME PAGE ";
+  $('.searched-songs').hide();
 
   //TOP TRACKS
   $scope.songs = []; 
@@ -68,7 +68,35 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
     createjs.Sound.stop(audioId);
   };
 
-  
+  $scope.searchTrack = function (){
+    var trackName = $('#searched-track').val();
+
+    $scope.searchedTracks = []; 
+    $http({
+      method: 'get', 
+      url: 'http://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+trackName+'&type=track'
+      
+    }).then(function (response) {
+        
+        var data = response.data.search.data.tracks;
+        for(var i=0; i < data.length; i++){
+          var allFoundTracks = {
+            id: data[i].id,
+            name: data[i].name.toLowerCase(),
+            artist: data[i].artistName.toLowerCase(),
+            image: 'https://api.napster.com/imageserver/v2/albums/'+data[i].albumId.toLowerCase()+'/images/500x500.jpg',
+            album: data[i].albumName.toLowerCase(),
+            audioUrl: data[i].previewURL
+          };
+          $scope.searchedTracks.push(allFoundTracks);
+        }
+      },function (error){
+        console.log(error, 'can not get data.');
+    }); //end request
+
+    $('.all-songs').hide();
+    $('.searched-songs').show();
+  }; //end searchTrack
   
 }]);//end scope
 

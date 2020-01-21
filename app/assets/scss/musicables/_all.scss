@@ -7,9 +7,12 @@
 .page-title {
     color:white;
     text-transform: capitalize;
+    margin-bottom: 0;
 }
 
 .title-banner {
     display: flex;
     flex-wrap: wrap;
+    align-items: center;
 }
+

@@ -5468,6 +5468,17 @@ body {
   background-color: transparent !important;
   text-transform: capitalize; }
 
+.btn-search {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50px;
+  background-color: transparent;
+  border: 1px solid white;
+  margin-left: 15px; }
+
 .card {
   padding: 15px; }
 
@@ -5719,11 +5730,13 @@ input:checked + .slider:before {
 
 .page-title {
   color: white;
-  text-transform: capitalize; }
+  text-transform: capitalize;
+  margin-bottom: 0; }
 
 .title-banner {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: center; }
 
 #artistDetails .modal-dialog {
   max-width: 100%;
@@ -5754,6 +5767,10 @@ input:checked + .slider:before {
   .artist-bio i {
     color: #6e6ee2;
     font-style: normal; }
+
+.author {
+  color: gray;
+  font-style: italic; }
 
 .songs-wrapper {
   display: flex;

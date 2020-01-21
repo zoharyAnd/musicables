@@ -12,11 +12,13 @@ angular.module('myApp', ['ngRoute','myApp.version', 'mainModule'])
 }]);
 
 // creation of a module named mainModule with dependencies for each page-controller
-angular.module("mainModule",['homepageModule', 'aboutModule', 'albumModule', 'genreModule', 'artistModule']);
+angular.module("mainModule",['homepageModule', 'aboutModule', 'albumModule', 'genreModule', 'artistModule', 'artistdetailModule']);
 
 //attach the module with a new controller : mainController 
 angular.module("mainModule").controller("mainController",['$scope', function($scope){
-  $scope.genreGlobal="global genre";
+  // const rootRef = firebase.database().ref.child('angular');
+  // const ref = rootRef.child('object');
+  // this.object = $firebaseObject(ref);
 }]);
 
 
