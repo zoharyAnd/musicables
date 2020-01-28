@@ -44,43 +44,62 @@ function showAlbumDetails(albumId){
     
 }// end showAlbumDetails
 
-function showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB){
-    $('#artistDetails .modal-img').attr('src', artistImage);
-    $('#artistDetails .modal-img').attr('alt', artistName);
+// function showArtistDetails(artistId, artistImage, artistName, artistBio, artistBioAuthor, artistBioB){
+//     $('#artistDetails .modal-img').attr('src', artistImage);
+//     $('#artistDetails .modal-img').attr('alt', artistName);
 
-    $('#artistDetails .artist-name').text(artistName);
-    var blurb = artistBioB + "</br>";
+//     $('#artistDetails .artist-name').text(artistName);
+//     var blurb = artistBioB + "</br>";
 
-    if(artistBio == artistBioB){
-        artistBioB ="";
-        blurb = "";
-    }
-    else if (artistBioB == undefined) {
-        artistBioB = "";
-        blurb = "";
-    }
-    $('#artistDetails .artist-bio').html(blurb + artistBio +"</br><div class='author'> -- by "+artistBioAuthor+"</div>");
+//     if(artistBio == artistBioB){
+//         artistBioB ="";
+//         blurb = "";
+//     }
+//     else if (artistBioB == undefined) {
+//         artistBioB = "";
+//         blurb = "";
+//     }
+//     $('#artistDetails .artist-bio').html(blurb + artistBio +"</br><div class='author'> -- by "+artistBioAuthor+"</div>");
     
-    $('#artistDetails .modal-body').empty();
+//     $('#artistDetails .modal-body').empty();
     
     
-    //top albums of an artist 
-    $.ajax({
-        url: 'http://api.napster.com/v2.2/artists/'+artistId+'/albums/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&limit=10',
-        type: 'get',
-        success: function(response){
-            var data = response.albums;
-            for(var i=0; i < data.length; i++){
-                $('#artistDetails .modal-body').append('<a type="button" class="track-wrapper album-toggler" id="'+data[i].id+'"><div class="album-image"><img src="https://api.napster.com/imageserver/v2/albums/'+data[i].id+'/images/500x500.jpg" alt="'+data[i].shortcut+'"/></div><div class="album-content"><p>'+data[i].name.toLowerCase()+'</p><p>'+data[i].artistName.toLowerCase()+'</p><p>'+formatDate(data[i].released)+'</p></div></a>');
-            }
+//     //top albums of an artist 
+//     $.ajax({
+//         url: 'http://api.napster.com/v2.2/artists/'+artistId+'/albums/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&limit=10',
+//         type: 'get',
+//         success: function(response){
+//             var data = response.albums;
+//             for(var i=0; i < data.length; i++){
+//                 $('#artistDetails .modal-body').append('<a type="button" class="track-wrapper album-toggler" id="'+data[i].id+'"><div class="album-image"><img src="https://api.napster.com/imageserver/v2/albums/'+data[i].id+'/images/500x500.jpg" alt="'+data[i].shortcut+'"/></div><div class="album-content"><p>'+data[i].name.toLowerCase()+'</p><p>'+data[i].artistName.toLowerCase()+'</p><p>'+formatDate(data[i].released)+'</p></div></a>');
+//             }
             
-        }, //end success
-        error:function(error){console.log("An error occured cannot get data");} //end error
-    }) // end ajax call
+//         }, //end success
+//         error:function(error){console.log("An error occured cannot get data");} //end error
+//     }) // end ajax call
 
-}//end showArtistDetails
+// }//end showArtistDetails
 
 function formatDate (date){
     var currentDate = new Date(date).toUTCString().substring(5,17);
     return currentDate;
-  }
+}
+
+
+function login (){
+    $('#quickstart-sign-in').removeClass('hide');
+    $('#quickstart-sign-up, #quickstart-verify-email, #quickstart-password-reset').addClass('hide');
+    $('#loginModalLabel').text('Login');
+}
+
+function register() {
+    $('#quickstart-sign-in').addClass('hide');
+    $('#quickstart-sign-up, #quickstart-verify-email, #quickstart-password-reset').removeClass('hide');
+    $('#loginModalLabel').text('Register');
+}
+
+
+function resetLogin() {
+    $('#email, #password').val('');
+    $('.authError').css('display', 'none');
+}

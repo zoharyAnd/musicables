@@ -3,7 +3,7 @@
 
 
 // Declare app level module which depends on views, and core components
-angular.module('myApp', ['ngRoute','myApp.version', 'mainModule'])
+angular.module('myApp', ['ngRoute','myApp.version', 'mainModule'] )
 
 .config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
   $locationProvider.hashPrefix('!');
@@ -16,7 +16,7 @@ angular.module("mainModule",['homepageModule', 'aboutModule', 'albumModule', 'ge
 
 //attach the module with a new controller : mainController 
 angular.module("mainModule").controller("mainController",['$scope', function($scope){
-  // const rootRef = firebase.database().ref.child('angular');
+  // const rootRef = firebase.database().ref().child('angular');
   // const ref = rootRef.child('object');
   // this.object = $firebaseObject(ref);
 }]);

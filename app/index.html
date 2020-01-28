@@ -58,6 +58,35 @@
   <script src="lib/angular/angular.js"></script>
   <script src="lib/angular-route/angular-route.js"></script>
   
+  
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-app.js"></script>
+
+  <!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-analytics.js"></script>
+
+  <!-- Add Firebase products that you want to use -->
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.7.0/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyCNXCNFM5-GZS5rBeRCDGaxhUsKHy-ooOk",
+    authDomain: "musicables-2fecb.firebaseapp.com",
+    databaseURL: "https://musicables-2fecb.firebaseio.com",
+    projectId: "musicables-2fecb",
+    storageBucket: "musicables-2fecb.appspot.com",
+    messagingSenderId: "1066494665566",
+    appId: "1:1066494665566:web:2368fda440ee59d97465cf",
+    measurementId: "G-K3E2LJVS1T"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+</script>
+
   <!-- JQuery -->
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <!-- Bootstrap tooltips -->
@@ -68,6 +97,7 @@
   <!-- Controllers -->
   <script src="app.js"></script>
   <script src="theme.js"></script>
+  <script src="firebase.js"></script>
   <script src="/Controller/homepageController.js"></script>
   <script src="/Controller/aboutController.js"></script>
   <script src="/Controller/albumController.js"></script>

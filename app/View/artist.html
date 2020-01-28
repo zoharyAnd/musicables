@@ -30,7 +30,7 @@
     </div>
 
     <div class="songs-wrapper searched-artists">
-        <a ng-repeat="artist in searchedArtists" class="card album-card" id={{artist.id}} type="button"data-toggle="modal" data-target="#artistDetails" ng-click="showDetailsSearched(artist.index);">
+        <a ng-repeat="artist in searchedArtists" class="card album-card" id={{artist.id}} type="button" href="/#!/artist/{{artist.name}}">
             <div class="card-image">
                 <img src={{artist.image}} alt={{artist.name}}/>
                 <div class="tags-icons two-col nb-tracks">

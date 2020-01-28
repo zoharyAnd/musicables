@@ -1,0 +1,39 @@
+[debug] [2020-01-28T15:40:32.401Z] ----------------------------------------------------------------------
+[debug] [2020-01-28T15:40:32.404Z] Command:       C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\firebase-tools\lib\bin\firebase.js serve
+[debug] [2020-01-28T15:40:32.405Z] CLI Version:   7.12.1
+[debug] [2020-01-28T15:40:32.405Z] Platform:      win32
+[debug] [2020-01-28T15:40:32.405Z] Node Version:  v10.16.2
+[debug] [2020-01-28T15:40:32.406Z] Time:          Tue Jan 28 2020 19:40:32 GMT+0400 (GMT+04:00)
+[debug] [2020-01-28T15:40:32.406Z] ----------------------------------------------------------------------
+[debug] [2020-01-28T15:40:32.406Z] 
+[debug] [2020-01-28T15:40:32.419Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-01-28T15:40:32.420Z] > authorizing via signed-in user
+[debug] [2020-01-28T15:40:32.420Z] [iam] checking project musicables-2fecb for permissions ["firebase.projects.get"]
+[debug] [2020-01-28T15:40:32.423Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/musicables-2fecb:testIamPermissions  
+
+[debug] [2020-01-28T15:40:35.027Z] <<< HTTP RESPONSE 200
+[debug] [2020-01-28T15:40:35.034Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/musicables-2fecb  
+ 
+[debug] [2020-01-28T15:40:36.252Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from 'E:\UTM\Y3\Portfolio\musicables'...
+[info] 
+[debug] [2020-01-28T15:40:36.269Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/musicables-2fecb/webApps/-/config  
+ 
+[debug] [2020-01-28T15:40:37.251Z] <<< HTTP RESPONSE 200
+[warn] !  Your requested "node" version "8" doesn't match your global version "10"
+[info] i  hosting: Serving hosting files from: app
+[info] +  hosting: Local server: http://localhost:5000
+[info] +  functions: Emulator started at http://localhost:5001
+[info] i  functions: Watching "E:\UTM\Y3\Portfolio\musicables\functions" for Cloud Functions...
+[debug] [2020-01-28T15:40:38.631Z] [worker-pool] addWorker(~diagnostic~)
+[debug] [2020-01-28T15:40:38.631Z] [worker-pool] Adding worker with key ~diagnostic~, total=1
+[debug] [2020-01-28T15:40:38.631Z] [worker-pool] submitWork(triggerId=)
+[debug] [2020-01-28T15:40:38.633Z] [worker-~diagnostic~-5f786d7c-4650-4753-a1b3-bb38a60b8dc0]: Assigning socketPath: \\?\pipe\E:\UTM\Y3\Portfolio\musicables\functions\5096
+[debug] [2020-01-28T15:40:38.634Z] [worker-~diagnostic~-5f786d7c-4650-4753-a1b3-bb38a60b8dc0]: BUSY
+[debug] [2020-01-28T15:40:39.836Z] [runtime-status] [5096] Functions runtime initialized. {"cwd":"E:\\UTM\\Y3\\Portfolio\\musicables\\functions","node_version":"10.16.2"}
+[debug] [2020-01-28T15:40:39.841Z] [runtime-status] [5096] Disabled runtime features: {"functions_config_helper":true,"network_filtering":true,"timeout":true,"memory_limiting":true,"admin_stubs":true,"pubsub_emulator":true}
+[debug] [2020-01-28T15:40:39.847Z] [runtime-status] [5096] Resolved module firebase-admin {"declared":true,"installed":true,"version":"8.9.2","resolution":"E:\\UTM\\Y3\\Portfolio\\musicables\\functions\\node_modules\\firebase-admin\\lib\\index.js"}
+[debug] [2020-01-28T15:40:39.849Z] [runtime-status] [5096] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"E:\\UTM\\Y3\\Portfolio\\musicables\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-01-28T15:40:39.851Z] [runtime-status] [5096] Resolved module firebase-functions {"declared":true,"installed":true,"version":"3.3.0","resolution":"E:\\UTM\\Y3\\Portfolio\\musicables\\functions\\node_modules\\firebase-functions\\lib\\index.js"}
+[debug] [2020-01-28T15:40:40.010Z] [worker-~diagnostic~-5f786d7c-4650-4753-a1b3-bb38a60b8dc0]: IDLE
