@@ -20,7 +20,7 @@ angular.module('genreModule').controller('genreController', ['$scope', '$http', 
 
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/genres?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+    url: 'https://api.napster.com/v2.2/genres?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
     
   }).then(function (response) {
       
@@ -44,7 +44,7 @@ angular.module('genreModule').controller('genreController', ['$scope', '$http', 
     $scope.songs = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/genres/'+genreid+'/tracks/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+      url: 'https://api.napster.com/v2.2/genres/'+genreid+'/tracks/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
       
     }).then(function (response) {
         

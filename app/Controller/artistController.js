@@ -17,7 +17,7 @@ angular.module('artistModule').controller('artistController', ['$scope', '$http'
   $scope.artists = []; 
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/artists/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+    url: 'https://api.napster.com/v2.2/artists/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
     
   }).then(function (response) {
       var data = response.data.artists;
@@ -69,7 +69,7 @@ angular.module('artistModule').controller('artistController', ['$scope', '$http'
     $scope.searchedArtists = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+artistName+'&type=artist'
+      url: 'https://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+artistName+'&type=artist'
       
     }).then(function (response) {
         

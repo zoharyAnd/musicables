@@ -18,7 +18,7 @@ angular.module('artistdetailModule').controller('artistdetailController', ['$sco
     $scope.albumsLinks = "";
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+param+'&type=artist'
+      url: 'https://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+param+'&type=artist'
       
     }).then(function (response) {
         var data = response.data.search.data.artists;
@@ -51,7 +51,7 @@ angular.module('artistdetailModule').controller('artistdetailController', ['$sco
     function loadAlbums (artistId){
       $http({
         method: 'get', 
-        url: 'http://api.napster.com/v2.2/artists/'+artistId+'/albums/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+        url: 'https://api.napster.com/v2.2/artists/'+artistId+'/albums/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
       }).then(function (response) {
           var data = response.data.albums;
           for(var i=0; i < data.length; i++){

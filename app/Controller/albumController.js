@@ -17,7 +17,7 @@ angular.module('albumModule').controller('albumController', ['$scope', '$http', 
   
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/albums/new?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+    url: 'https://api.napster.com/v2.2/albums/new?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
     
   }).then(function (response) {
       
@@ -62,7 +62,7 @@ angular.module('albumModule').controller('albumController', ['$scope', '$http', 
     $scope.searchedAlbums = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+albumName+'&type=album'
+      url: 'https://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+albumName+'&type=album'
       
     }).then(function (response) {
         

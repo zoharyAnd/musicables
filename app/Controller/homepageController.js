@@ -18,7 +18,7 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
   
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/tracks/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+    url: 'https://api.napster.com/v2.2/tracks/top?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
     
   }).then(function (response) {
       
@@ -42,7 +42,7 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
   $scope.genres = []; 
   $http({
     method: 'get', 
-    url: 'http://api.napster.com/v2.2/genres?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
+    url: 'https://api.napster.com/v2.2/genres?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4'
     
   }).then(function (response) {
       
@@ -74,7 +74,7 @@ angular.module('homepageModule').controller('homepageController', ['$scope', '$h
     $scope.searchedTracks = []; 
     $http({
       method: 'get', 
-      url: 'http://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+trackName+'&type=track'
+      url: 'https://api.napster.com/v2.2/search?apikey=YTkxZTRhNzAtODdlNy00ZjMzLTg0MWItOTc0NmZmNjU4Yzk4&query='+trackName+'&type=track'
       
     }).then(function (response) {
         
